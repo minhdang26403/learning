@@ -1,0 +1,1 @@
+add_executable(atomic_main atomic_main.cpp)
