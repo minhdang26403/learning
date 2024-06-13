@@ -18,7 +18,12 @@ if(protobuf_VERBOSE)
   message(STATUS "Using Protocol Buffers ${protobuf_VERSION}")
 endif()
 
-foreach(example add_person)
+set(examples
+  add_person
+  list_people
+)
+
+foreach(example ${examples})
   set(${example}_SRCS ${example}.cc)
   set(${example}_PROTOS addressbook.proto)
 
