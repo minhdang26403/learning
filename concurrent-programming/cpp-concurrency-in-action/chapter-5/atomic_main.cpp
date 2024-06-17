@@ -21,6 +21,7 @@ class spinlock_mutex {
 int main() {
   std::atomic_flag f;
   std::cout << f.test() << '\n';
+  std::cout << ATOMIC_BOOL_LOCK_FREE << '\n';
 
   return 0;
 }
