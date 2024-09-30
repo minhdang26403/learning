@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 20) # Compile as C++20
 set(CMAKE_CXX_STANDARD_REQUIRED ON) # Require C++20 support.
 
 project(LearnCppConcurrency VERSION 2024.1
-  DESCRIPTION "Code examples to learn C++ coroutine"
+  DESCRIPTION "Building an interpreter"
   LANGUAGES C CXX)
 
 # #####################################################################################################################
@@ -31,28 +31,5 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 include(GoogleTest)
 
-# Executables
-add_executable(coroutine coroutine.cpp)
-add_executable(generator generator.cpp)
-add_executable(async_reset_event async_reset_event.cpp)
-add_executable(symmetric_transfer symmetric_transfer.cpp)
 
-# # Unit tests
-# set(TESTS
-#   coroutine_test
-# )
-
-# # Loop through each test
-# foreach(TEST_NAME ${TESTS})
-#   # Add ".cpp" suffix to the test name
-#   set(TEST_NAME_CPP "${TEST_NAME}.cpp")
-
-#   # Create executable from the test source file
-#   add_executable(${TEST_NAME} ${TEST_NAME_CPP})
-
-#   # Link the test with gtest_main
-#   target_link_libraries(${TEST_NAME} GTest::gtest_main)
-
-#   # Discover tests for each executable
-#   gtest_discover_tests(${TEST_NAME})
-# endforeach()
+add_subdirectory(cclox)
