@@ -1,6 +1,0 @@
-- The first thing to do for every Go project is enabling dependency tracking: go mod init `module_name`. The module name will be the import path
-- `go mod tidy` will update the `go.mod` file for any update related to dependency.
-- If a package hasn't beem published yet, use `go mod edit -replace old=new` to update the `go.mod` file to find the file using the local file system path.
-- Use `log` package to log the debugging information. We can set the log prefix, change the `log` flag to disable printing time, source file, and line number.
-- `log.Fatal(err)` function prints the error and stops the program.
-- Go executes init functions automatically at program startup, after global variables have been initialized.
