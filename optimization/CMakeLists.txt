@@ -32,6 +32,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 # Collect all executables (can be expanded easily)
 set(SOURCES
   bench.cpp
+  controlling_timers.cpp
   main.cpp
   timer.cpp
 ) # Add more source files here
