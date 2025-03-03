@@ -33,6 +33,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 set(SOURCES
   bench.cpp
   controlling_timers.cpp
+  custom_stat.cpp
   main.cpp
   manual_timing.cpp
   prevent_opt.cpp
