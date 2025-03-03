@@ -34,6 +34,8 @@ set(SOURCES
   bench.cpp
   controlling_timers.cpp
   main.cpp
+  manual_timing.cpp
+  prevent_opt.cpp
   timer.cpp
 ) # Add more source files here
 
