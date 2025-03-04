@@ -1,6 +1,5 @@
 #include <benchmark/benchmark.h>
 #include <algorithm>
-#include <execution>
 #include <numeric>
 
 namespace bm = benchmark;
