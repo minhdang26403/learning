@@ -34,6 +34,7 @@ set(SOURCES
   bench.cpp
   controlling_timers.cpp
   custom_stat.cpp
+  fast.cpp
   main.cpp
   manual_timing.cpp
   prevent_opt.cpp
