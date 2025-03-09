@@ -1,0 +1,3 @@
+[submodule "concurrent-programming/lock-free-programming/concurrent-programming/lock-free-programming/third-party/relacy"]
+	path = concurrent-programming/lock-free-programming/concurrent-programming/lock-free-programming/third-party/relacy
+	url = https://github.com/dvyukov/relacy.git

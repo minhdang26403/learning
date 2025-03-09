@@ -21,8 +21,8 @@ if(GENERATE_ASSEMBLY)
     message(STATUS "Generating assembly output")
 endif()
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -Werror -Wstrict-aliasing=2 -Wno-unqualified-std-cast-call -Wno-sign-conversion")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -ggdb -fsanitize=${SANITIZER} -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+# set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra -Werror -Wstrict-aliasing=2 -Wno-unqualified-std-cast-call -Wno-sign-conversion")
+# set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -ggdb -fsanitize=${SANITIZER} -fno-omit-frame-pointer -fno-optimize-sibling-calls")
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -mtune=native -march=native")
 
@@ -52,12 +52,17 @@ FetchContent_Declare(
 # Fetch the content (download and build)
 FetchContent_MakeAvailable(googletest googlebenchmark)
 
+# This currently does not work, include directly instead
+# add_subdirectory(third-party)
+include_directories(${CMAKE_SOURCE_DIR}/third-party/relacy)
+
 # ==============================Executables==============================
 list(APPEND SOURCES
   dekker
   lock_free
   memory_ordering
   seq_consistency
+  test_relacy
 )
 
 foreach(SOURCE IN LISTS SOURCES)
